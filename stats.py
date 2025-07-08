@@ -19,5 +19,6 @@ def get_new_list(dict):
     new_list = []
     for character, count in dict.items():
         new_dict = {"char": character, "num": count}
-        new_list.append(new_dict)
+        if new_dict["char"].isalpha():
+            new_list.append(new_dict)
     return new_list
