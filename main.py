@@ -13,5 +13,5 @@ def main():
     print(f"{num_words} words found in the document")
     dict = count_char(text)
     print(get_new_list(dict))
-
+    
 main()

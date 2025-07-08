@@ -15,10 +15,14 @@ def count_char(text):
             dict[character] += 1
     return dict
 
+def sort_on(item):
+    return item["num"]
+
 def get_new_list(dict):
     new_list = []
     for character, count in dict.items():
         new_dict = {"char": character, "num": count}
         if new_dict["char"].isalpha():
             new_list.append(new_dict)
+    new_list.sort(reverse=True, key=sort_on)
     return new_list
