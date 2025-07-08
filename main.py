@@ -10,8 +10,10 @@ def main():
     path = "./books/frankenstein.txt"
     text = get_book_text(path)
     num_words = get_num_words(text)
-    print(f"{num_words} words found in the document")
+    print(f"Found {num_words} total words")
     dict = count_char(text)
-    print(get_new_list(dict))
-    
+    new_list = get_new_list(dict)
+    for word in new_list:
+        print(word["char"] + ":", word["num"])
+
 main()
