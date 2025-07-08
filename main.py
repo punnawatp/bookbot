@@ -1,21 +1,16 @@
-
 from stats import get_num_words
 from stats import get_dictionary
 from stats import sort_dict
 
 def get_book_text(path):
     with open(path) as f:
-        file_contents = f.read()
-    return file_contents
+        return f.read()
 
-def main(path):
+def main():
+    path = "./books/frankenstein.txt"
     text = get_book_text(path)
-    print(text)
+    get_num_words(frakenstein_text)
+    print(f"{num_words} words found in the document")
 
 
-frakenstein_text = get_book_text("./books/frankenstein.txt")
-
-print(get_num_words(frakenstein_text))
-
-dictionary = sort_dict(get_dictionary(frakenstein_text))
 
